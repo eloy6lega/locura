@@ -38,5 +38,11 @@ class Premium(Servicio):
     def consultarDetalle(self):
         print('El servicio es Premium')
 
-prem=Premium()
-prem.consultarDetalle()
+s=int(input('Dime un servicio, Estándar (1) o Premium (2): '))
+match s:
+    case 1:
+        est=Estandar()
+        est.consultarDetalle()
+    case 2:
+        prem=Premium()
+        prem.consultarDetalle()
